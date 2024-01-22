@@ -4,13 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
+    <link rel="stylesheet" href="./syles.css" />
   </head>
   <body>
-    <section>
-      <div>
-        <h1>Hello</h1>
-        <input type="text" />
+    <section class="todo">
+      <h2>To-do list</h2>
+      <div class="input">
+        <input
+          type="text"
+          class="input-field"
+          id="todoInput"
+          placeholder="Add a new to-do"
+        />
       </div>
+      <ul class="scroll">
+        <li id="todoList"></li>
+      </ul>
+      <div>
+        <hr class="counter" />
+        <div class="counter-container">
+          <p>
+            <span>0</span>
+            items total
+          </p>
+          <button id="delete-btn">Delete All</button>
+        </div>
+      </div>
+      <button class="btn">Add</button>
     </section>
+
+    <footer>
+      <div class="footer">
+        <p class="made-by">Made By</p>
+        <p class="author">Om</p>
+      </div>
+    </footer>
   </body>
 </html>
