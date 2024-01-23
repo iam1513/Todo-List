@@ -15,16 +15,17 @@
   --blue: #2d70fd;
   --green: #00d8a7;
   --white: #ffffff;
+  --gradient1: linear-gradient(315deg, #ffff45 0%, #ff5858 74%);
 }
 
 body {
   margin: 0;
   height: 100vh;
-  background: var(--gradient);
+  background: var(--gradient1);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .btn {
@@ -56,20 +57,23 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   background: var(--white);
-  padding: 3rem;
-  height: 50%;
+  padding: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  height: 100%;
   width: 60%;
-  box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
-  max-width: 30rem;
+  /* box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15); */
+  background: rgb(52, 139, 220);
 }
 
 h2 {
   text-transform: uppercase;
+  font-size: 32px;
   /* Keep in mind */
-  height: 3rem;
-  color: var(--dark);
+  height: 4rem;
+  color: var(--white);
   text-align: center;
 }
 
@@ -93,7 +97,7 @@ input[type="text"]::placeholder {
 
 .todo-container {
   display: flex;
-  gap: 1rem;
+  gap: 0.3rem;
 }
 
 ul {
@@ -106,15 +110,23 @@ ul {
 li {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.5rem;
   padding: 1.3rem;
 }
 
 #todoList p {
+  padding: 4px;
+  /* padding-left: px; */
   display: flex;
   gap: 1rem;
   color: var(--dark);
   align-items: center;
+  background: var(--white);
+  border-radius: 4px;
+}
+
+#todoList {
+  height: fit-content;
 }
 
 #todoList .disabled {
@@ -141,19 +153,21 @@ input[type="checkbox"]::before {
   height: 2rem;
   font-size: 1.5rem;
   text-align: center;
-  border: 0.06rem solid var(--grey-border);
-  border-radius: 50%;
+  border: 0.1rem solid var(--grey-border);
+  border-radius: 10%;
   color: transparent;
 }
 
 input[type="checkbox"]:checked::before {
   color: var(--white);
   background-color: var(--green);
-  border: 0.06rem solid var(--green);
-  border-radius: 50%;
+  border: 0.1rem solid var(--green);
+  border-radius: 10%;
 }
 
 .counter {
+  display: flex;
+  align-self: flex-end;
   border: 0.06rem solid var(--grey-light);
 }
 
@@ -166,6 +180,9 @@ input[type="checkbox"]:checked::before {
 
 .counter-container p {
   align-self: center;
+  font-size: 1.3rem;
+  color: var(--white);
+  padding: 5px;
 }
 
 .counter-container button {
@@ -207,4 +224,14 @@ input[type="checkbox"]:checked::before {
 
 .scroll::-webkit-scrollbar-track {
   display: none;
+}
+
+/* To Style delete button */
+#delete-btn {
+  background: var(--green);
+  color: white;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1rem;
 }
