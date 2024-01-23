@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
     <link rel="stylesheet" href="./syles.css" />
+    <script src="./main.js" defer></script>
+    <!-- Using defer instead of adding script at the end -->
   </head>
   <body>
     <section class="todo">
@@ -25,7 +27,7 @@
         <hr class="counter" />
         <div class="counter-container">
           <p>
-            <span>0</span>
+            <span id="todoCount">0</span>
             items total
           </p>
           <button id="delete-btn">Delete All</button>
